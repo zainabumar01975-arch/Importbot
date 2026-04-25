@@ -6,8 +6,18 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 # Logging (helps debug if anything breaks)
 logging.basicConfig(level=logging.INFO)
 
+import os
+
 TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_ID = int(os.getenv("ADMIN_ID"))
+ADMIN_ID = os.getenv("ADMIN_ID")
+
+if not TOKEN:
+    raise ValueError("BOT_TOKEN is missing")
+
+if not ADMIN_ID:
+    raise ValueError("ADMIN_ID is missing")
+
+ADMIN_ID = int(ADMIN_ID)
 
 # Start command
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
