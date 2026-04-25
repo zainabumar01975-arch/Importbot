@@ -6,7 +6,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 # Logging (helps debug if anything breaks)
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = os.getenv("8672600900:AAE3-uxZBLkuTncdprtNV6Nmn9MKvzBn7hA")
+TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
 # Start command
