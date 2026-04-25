@@ -7,7 +7,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 logging.basicConfig(level=logging.INFO)
 
 TOKEN = os.getenv("8672600900:AAE3-uxZBLkuTncdprtNV6Nmn9MKvzBn7hA")
-ADMIN_ID = int(os.getenv("8273206128"))
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
 # Start command
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
